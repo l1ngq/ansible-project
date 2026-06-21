@@ -1,0 +1,11 @@
+---
+packages:
+  - htop
+  - vim
+  - curl
+  - git
+  - unzip
+  - ufw
+ssh_key: "~/.ssh/id_ed25519.pub"
+time_zone: "Europe/Moscow"
+username: "deploy"
