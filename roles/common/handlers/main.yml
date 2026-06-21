@@ -1,0 +1,14 @@
+---
+- name: Restart sshd
+  ansible.builtin.service:
+    name: sshd
+    state: restarted
+  when: ansible_facts['os_family'] == "RedHat"
+  tags: sshd
+
+- name: Restart ssh
+  ansible.builtin.service:
+    name: ssh
+    state: restarted
+  when: ansible_facts['os_family'] == "Debian"
+  tags: sshd
